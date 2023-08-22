@@ -24,4 +24,7 @@ return {
    nontext = "#3B4048",
    white = "#ABB2BF",
    black = "#191A21",
+   base = "#155869",
+   surface1 = "#51576d",
+   purple2 = "#bd93f9",
 }

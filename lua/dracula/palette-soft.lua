@@ -5,6 +5,9 @@ return {
    selection = "#7C7F8A",
    comment = "#70747f",
    orange = "#FDC38E",
+   base = "#155869",
+   surface1 = "#51576d",
+   purple2 = "#bd93f9",
    -- ANSI
    black = "#1C1C1C", -- ANSI 0
    red = "#DD6E6B",
