@@ -517,7 +517,7 @@ local function setup(configs)
       NotifyWarnTitle = { fg = colors.orange },
       NotifyWarnBorder = { fg = "#785637" },
 
-      IlluminatedWordText = { fg = colors.fg, bg = colors.fg },
+      IlluminatedWordText = { fg = colors.fg, bg = colors.purple2 },
       IlluminatedWordRead = { fg = colors.fg, bg = colors.purple2 },
       IlluminatedWordWrite = { fg = colors.fg, bg = colors.purple2 },
       illuminatedWord = { bg = colors.surface1 },
