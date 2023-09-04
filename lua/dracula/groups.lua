@@ -38,7 +38,8 @@ local function setup(configs)
    return {
       Normal = { fg = colors.fg, bg = colors.bg },
       NormalFloat = { fg = colors.fg, bg = colors.bg },
-      Comment = { fg = colors.comment, italic = configs.italic_comment },
+      -- Comment = { fg = colors.comment, italic = configs.italic_comment },
+      Comment = { fg = colors.comment, italic = true },
       Constant = { fg = colors.yellow },
       String = { fg = colors.yellow },
       Character = { fg = colors.green },
@@ -49,7 +50,7 @@ local function setup(configs)
       Operator = { fg = colors.purple },
       Keyword = { fg = colors.cyan },
       Keywords = { fg = colors.cyan },
-      Identifier = { fg = colors.cyan },
+      Identifier = { fg = colors.cyan, italic = true },
       Function = { fg = colors.yellow },
       Statement = { fg = colors.purple },
       Conditional = { fg = colors.pink },
