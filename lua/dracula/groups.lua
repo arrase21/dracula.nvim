@@ -50,24 +50,25 @@ local function setup(configs)
       Operator = { fg = colors.purple },
       Keyword = { fg = colors.cyan },
       Keywords = { fg = colors.cyan },
-      Identifier = { fg = colors.cyan, italic = true },
-      Function = { fg = colors.yellow },
+      Identifier = { fg = colors.cyan },
+      Function = { fg = colors.yellow, italic = true },
+      FunctionBuiltin = { fg = colors.yellow, italic = true },
       Statement = { fg = colors.purple },
       Conditional = { fg = colors.pink },
       Repeat = { fg = colors.pink },
       Label = { fg = colors.cyan },
       Exception = { fg = colors.purple },
-      PreProc = { fg = colors.yellow, italic = true },
+      PreProc = { fg = colors.yellow },
       Include = { fg = colors.purple },
       Define = { fg = colors.purple },
       Title = { fg = colors.cyan },
       Macro = { fg = colors.purple },
       PreCondit = { fg = colors.cyan },
-      Type = { fg = colors.cyan, italic = true },
+      Type = { fg = colors.cyan },
       StorageClass = { fg = colors.pink },
       Structure = { fg = colors.yellow },
       TypeDef = { fg = colors.yellow },
-      Special = { fg = colors.green, italic = true },
+      Special = { fg = colors.green },
       SpecialComment = { fg = colors.comment, italic = true },
       Error = { fg = colors.bright_red },
       Todo = { fg = colors.purple, bold = true, italic = true },
@@ -181,10 +182,10 @@ local function setup(configs)
 
       ["@text"] = { fg = colors.orange },
       ["@text.strong"] = { fg = colors.orange, bold = true }, -- bold
-      ["@text.emphasis"] = { fg = colors.yellow, italic = true }, -- italic
+      ["@text.emphasis"] = { fg = colors.yellow, italic = true, term = italic }, -- italic
       ["@text.underline"] = { fg = colors.orange },
       ["@text.title"] = { fg = colors.pink, bold = true }, -- title
-      ["@text.literal"] = { fg = colors.yellow }, -- inline code
+      ["@text.literal"] = { fg = colors.yellow, italic = true }, -- inline code
       ["@text.uri"] = { fg = colors.yellow, italic = true }, -- urls
       ["@text.reference"] = { fg = colors.orange, bold = true },
 
@@ -518,7 +519,7 @@ local function setup(configs)
       NotifyWarnTitle = { fg = colors.orange },
       NotifyWarnBorder = { fg = "#785637" },
 
-      IlluminatedWordText = { fg = colors.fg, bg = colors.purple2, italic = true },
+      IlluminatedWordText = { fg = colors.fg, bg = colors.purple2 },
       IlluminatedWordRead = { fg = colors.fg, bg = colors.purple2 },
       IlluminatedWordWrite = { fg = colors.fg, bg = colors.purple2 },
       illuminatedWord = { bg = colors.surface1 },
