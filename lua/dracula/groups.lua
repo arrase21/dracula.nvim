@@ -285,13 +285,16 @@ local function setup(configs)
       GitSignsCurrentLineBlame = { fg = colors.white },
 
       -- Telescope
-      TelescopePromptBorder = { fg = colors.comment },
+      TelescopeMatching = { fg = colors.green },
+      TelescopeBorder = { fg = colors.purple },
+      TelescopePromptBorder = { fg = colors.purple },
+      TelescopeTitle = { fg = colors.purple },
       TelescopeResultsBorder = { fg = colors.comment },
       TelescopePreviewBorder = { fg = colors.comment },
-      TelescopeSelection = { fg = colors.white, bg = colors.selection },
-      TelescopeMultiSelection = { fg = colors.purple, bg = colors.selection },
+      TelescopeSelection = { fg = colors.purple2, bg = colors.visual },
+      TelescopeSelectionCaret = { fg = colors.pink },
+      TelescopeMultiSelection = { fg = colors.purple, bg = colors.visual },
       TelescopeNormal = { fg = colors.fg, bg = colors.bg },
-      TelescopeMatching = { fg = colors.green },
       TelescopePromptPrefix = { fg = colors.purple },
       TelescopeResultsDiffDelete = { fg = colors.red },
       TelescopeResultsDiffChange = { fg = colors.cyan },
@@ -519,11 +522,12 @@ local function setup(configs)
       NotifyWarnTitle = { fg = colors.orange },
       NotifyWarnBorder = { fg = "#785637" },
 
-      IlluminatedWordText = { fg = colors.fg, bg = colors.purple2 },
-      IlluminatedWordRead = { fg = colors.fg, bg = colors.purple2 },
-      IlluminatedWordWrite = { fg = colors.fg, bg = colors.purple2 },
-      illuminatedWord = { bg = colors.surface1 },
-      illuminatedCurWord = { bg = colors.surface1 },
+      Illuminate = { fg = colors.none, bg = colors.base, italic = true },
+      IlluminatedWordText = { fg = colors.none, bg = colors.base, italic = true },
+      IlluminatedWordRead = { fg = colors.none, bg = colors.base, italic = true },
+      IlluminatedWordWrite = { fg = colors.none, bg = colors.base, italic = true },
+      illuminatedWord = { bg = colors.base, italic = true },
+      illuminatedCurWord = { bg = colors.base, italic = true },
    }
 end
 
