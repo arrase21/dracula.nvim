@@ -23,6 +23,7 @@
 ---@field nontext string
 ---@field white string
 ---@field black string
+---@field dark_p string
 return {
    bg = "#141423",
    fg = "#F8F8F2",
@@ -34,7 +35,7 @@ return {
    green = "#50fa7b",
    purple = "#BD93F9",
    cyan = "#2CCCFF",
-   pink = "#FF79C6",
+   pink = "#FF6BCB",
    bright_red = "#FF6E6E",
    bright_green = "#20E3B2",
    bright_yellow = "#FFFFA5",
@@ -48,4 +49,5 @@ return {
    nontext = "#3B4048",
    white = "#F8F8F2",
    black = "#191A21",
+   dark_p = "#a166f6",
 }

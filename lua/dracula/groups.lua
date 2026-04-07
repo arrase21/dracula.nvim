@@ -84,7 +84,7 @@ local function setup(configs)
       CursorLine = { bg = colors.selection, },
       ColorColumn = { bg = colors.selection, },
 
-      StatusLine = { fg = colors.white, bg = colors.selection, },
+      StatusLine = { fg = colors.white, bg = colors.bg, },
       StatusLineNC = { fg = colors.comment, },
       StatusLineTerm = { fg = colors.white, bg = colors.black, },
       StatusLineTermNC = { fg = colors.comment, },
@@ -105,7 +105,7 @@ local function setup(configs)
       LineNr = { fg = colors.comment, },
       MatchParen = { fg = colors.fg, underline = true, },
       NonText = { fg = colors.nontext, },
-      Pmenu = { fg = colors.white, bg = colors.selection, },
+      Pmenu = { fg = colors.white, bg = 'none' },
       PmenuSel = { fg = colors.white, bg = colors.selection, },
       PmenuSbar = { bg = colors.bg, },
       PmenuThumb = { bg = colors.selection, },
@@ -543,15 +543,25 @@ local function setup(configs)
       MiniIconsYellow = { fg = colors.yellow },
 
       -- mini.statusline
-      MiniStatuslineModeNormal = { fg = colors.black, bg = colors.purple, bold = true },
-      MiniStatuslineModeInsert = { fg = colors.black, bg = colors.green, bold = true },
-      MiniStatuslineModeVisual = { fg = colors.black, bg = colors.pink, bold = true },
+      MiniStatuslineModeNormal = { fg = colors.black, bg = colors.bright_cyan, bold = true },
+      MiniStatuslineModeInsert = { fg = colors.black, bg = colors.dark_p, bold = true },
+      MiniStatuslineModeVisual = { fg = colors.black, bg = colors.bright_cyan, bold = true },
       MiniStatuslineModeReplace = { fg = colors.black, bg = colors.yellow, bold = true },
       MiniStatuslineModeCommand = { fg = colors.black, bg = colors.cyan, bold = true },
       MiniStatuslineInactive = { fg = colors.fg, bg = colors.visual, bold = true },
       MiniStatuslineDevinfo = { fg = colors.purple, bg = colors.black },
       MiniStatuslineFilename = { fg = colors.white, bg = colors.black },
       MiniStatuslineFileinfo = { fg = colors.purple, bg = colors.black },
+
+      -- mini.tabline
+      MiniTablineCurrent = { fg = colors.white },
+      MiniTablineModifiedCurrent = { fg = colors.pink },
+
+      -- mini.picks
+      MiniPickBorder = { fg = colors.pink },       -- window border.
+      MiniPickNormal = { bg = 'none' },            -- basic foreground/background highlighting.
+      MiniPickPrompt = { fg = colors.pink },       -- prompt.
+      MiniPickPromptPrefix = { fg = colors.pink }, -- prefix of the prompt.
 
       -- mini.files
       MiniFilesNormal = { fg = colors.fg, bg = 'none' },
