@@ -123,7 +123,7 @@ local function setup(configs)
       TabLineSel = { fg = colors.white, },
       TabLineFill = { bg = colors.bg, },
       Terminal = { fg = colors.white, bg = colors.black, },
-      Visual = { bg = colors.visual, },
+      Visual = { fg = colors.bright_white, bg = '#FF00FF', },
       VisualNOS = { fg = colors.visual, },
       WarningMsg = { fg = colors.yellow, },
       WildMenu = { fg = colors.black, bg = colors.white, },
@@ -532,6 +532,10 @@ local function setup(configs)
       MiniIndentscopeSymbol = { fg = "#B5629B" },
       MiniIndentscopeSymbolOff = { fg = "#B5629B" },
 
+      --mini.cursorWord
+      MiniNotifyNormal = { fg = colors.dark_p, bg = 'none' },
+      MiniNotifyBorder = { fg = colors.cyan },
+
       -- mini.icons
       MiniIconsAzure = { fg = colors.bright_cyan },
       MiniIconsBlue = { fg = colors.bright_blue },
@@ -556,6 +560,16 @@ local function setup(configs)
       -- mini.tabline
       MiniTablineCurrent = { fg = colors.white },
       MiniTablineModifiedCurrent = { fg = colors.pink },
+      MiniTablineModifiedHidden = { fg = colors.pink }, -- buffer is modified and hidden.
+      -- MiniTablineVisible` - buffer is visible (displayed in some window).
+      -- MiniTablineHidden` - buffer is hidden (not displayed).
+      -- MiniTablineModifiedCurrent` - buffer is modified and current.
+      -- MiniTablineModifiedVisible` - buffer is modified and visible.
+      -- MiniTablineFill` - unused right space of tabline.
+      -- MiniTablineTabpagesection` - section with tabpage information.
+      -- MiniTablineTrunc` - truncation symbols indicating more left/right tabs.
+
+
 
       -- mini.picks
       MiniPickBorder = { fg = colors.pink },       -- window border.

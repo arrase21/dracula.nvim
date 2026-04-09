@@ -69,24 +69,29 @@ local function apply(configs)
    local colors = configs.colors
    apply_term_colors(colors)
    local groups = require("dracula.groups").setup(configs)
-
-   -- apply transparents
    if configs.transparent_bg then
       for _, group in ipairs(TRANSPARENTS) do
          groups[group].bg = nil
       end
    end
-
    if type(configs.overrides) == "table" then
       groups = override_groups(groups, configs.overrides --[[@as HighlightGroups]])
    elseif type(configs.overrides) == "function" then
       groups = override_groups(groups, configs.overrides(colors))
    end
-
-   -- set defined highlights
    for group, setting in pairs(groups) do
       nvim_set_hl(0, group, setting)
    end
+   vim.defer_fn(function()
+      nvim_set_hl(0, 'MiniCursorword', {
+         bg = colors.visual,
+         bold = true,
+      })
+      nvim_set_hl(0, 'MiniCursorwordCurrent', {
+         bg = colors.visual,
+         underline = true,
+      })
+   end, 90)
 end
 
 ---@type DraculaConfig
